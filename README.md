@@ -1,3 +1,14 @@
+• Project involves creating an e-commerce site
+for online product sales using Databases and other
+storage options.
+• Shows the user a catalog of various products available
+for purchase in the store.
+• Tech Stack: SQL
+
+https://rb.gy/q30hz
+
+
+
 CREATE TABLE cart (
     CART_ID VARCHAR2(26) NOT NULL PRIMARY KEY
 );
