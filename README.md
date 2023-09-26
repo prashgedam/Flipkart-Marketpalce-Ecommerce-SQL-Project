@@ -1,4 +1,4 @@
-##Objective: Design and implement a relational database system to model an e-commerce marketplace similar to Flipkart. Develop SQL queries to handle various aspects of the marketplace, including product management, order processing, user interactions, and analytics.
+## Objective: Design and implement a relational database system to model an e-commerce marketplace similar to Flipkart. Develop SQL queries to handle various aspects of the marketplace, including product management, order processing, user interactions, and analytics.
 
 • Project involves creating an e-commerce site
 for online product sales using Databases and other
@@ -7,7 +7,7 @@ storage options.
 for purchase in the store.
 • Tech Stack: SQL
 
-##https://rb.gy/q30hz
+## https://rb.gy/q30hz
 
 
 
