@@ -160,5 +160,7 @@ JOIN orders o ON c.customer_id = o.customer_id
 JOIN payment pm ON o.customer_id = pm.customer_id
 WHERE pm.payment_type in ('Credit Card', 'Debit Card');
 
+## [Click Here To View The ER Diagram](https://github.com/prashgedam/Flipkart-Marketplace-Ecommerce-SQL-Project/blob/main/Flipkart_Marketplace_flipkart%20project.pdf)
+
 
 
