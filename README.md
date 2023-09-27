@@ -97,15 +97,15 @@ CREATE TABLE review (
     FOREIGN KEY (CUSTOMER_ID) REFERENCES customer(CUSTOMER_ID)
 );
 
-Queries
+## Queries
 
-1. Retrieve the names of the top 5 most expensive products.
+# 1. Retrieve the names of the top 5 most expensive products.
 
 SELECT PRODUCT_ID, COST
 FROM PRODUCTS
 ORDER BY COST DESC FETCH FIRST 15 ROWS ONLY;
 
-2. Customer wants to see filtered products on the basis of size,gender,type
+# 2. Customer wants to see filtered products on the basis of size,gender,type
 
 SELECT PRODUCT_ID, COLOR, COST, SELLER_ID FROM PRODUCTS WHERE TYPE='Shirt' AND P_SIZE='L';
 
