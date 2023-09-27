@@ -97,19 +97,19 @@ CREATE TABLE review (
     FOREIGN KEY (CUSTOMER_ID) REFERENCES customer(CUSTOMER_ID)
 );
 
-## Queries
+# Queries
 
-# 1. Retrieve the names of the top 5 most expensive products.
+## 1. Retrieve the names of the top 5 most expensive products.
 
 SELECT PRODUCT_ID, COST
 FROM PRODUCTS
 ORDER BY COST DESC FETCH FIRST 15 ROWS ONLY;
 
-# 2. Customer wants to see filtered products on the basis of size,gender,type
+## 2. Customer wants to see filtered products on the basis of size,gender,type
 
 SELECT PRODUCT_ID, COLOR, COST, SELLER_ID FROM PRODUCTS WHERE TYPE='Shirt' AND P_SIZE='L';
 
-3. Calculate total order amount for a specific customer
+## 3. Calculate total order amount for a specific customer
 SELECT customer_id, SUM(total_amount) AS total_spent
 FROM Orders
 WHERE customer_id in('CUST006', 'CUST016', 'CUST008')
@@ -120,7 +120,7 @@ SELECT * FROM Orders
 ORDER BY order_date DESC;
 
 
-5. Create the query to retrieve the total number of orders placed by each customer:
+## 5. Create the query to retrieve the total number of orders placed by each customer:
 
 SELECT C.customer_id, C.first_name, C.last_name, COUNT(O.order_id) AS total_orders
 FROM Customer C
@@ -129,31 +129,31 @@ GROUP BY C.customer_id, C.first_name, C.last_name
 ORDER BY total_orders DESC;
 
 
-6. Retrieve customer orders with details:
+## 6. Retrieve customer orders with details:
 SELECT c.customer_id, c.customer_name, o.order_id, o.order_date
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id;
 
 
-7. How much product sold on the particular date?
+## 7. How much product sold on the particular date?
 SELECT COUNT(product_id) count_pid,date_added FROM cart_item WHERE purchased='YES'  GROUP BY(date_added);
 
 
-8. If a customer want to know the total price present in the cart
+## 8. If a customer want to know the total price present in the cart
 select sum(QUANTITY_WISHED * cost * COMMISSION/100) TOTAL_PROFIT from PRODUCTS p join CART_ITEM c on p.PRODUCT_ID=c.PRODUCT_ID where PURCHASED=’NO';
 
-9. If admin want to see what are the product purchased on the particular date
+## 9. If admin want to see what are the product purchased on the particular date
 
 select PRODUCT_ID from CART_ITEM where (PURCHASED='YES' and DATE_ADDED='17-01-23');
 
-10. Retrieve pending orders for a specific payment method:
+## 10. Retrieve pending orders for a specific payment method:
 select o.order_id, o.order_date, c.first_name, c.last_name
 from orders o
 join customer c on o.customer_id = c.customer_id
 where o.status = 'pending';
 
 
-11. Retrieve customers who used a specific payment method:
+## 11. Retrieve customers who used a specific payment method:
 SELECT c.customer_id, c.last_name
 FROM customer c
 JOIN orders o ON c.customer_id = o.customer_id
