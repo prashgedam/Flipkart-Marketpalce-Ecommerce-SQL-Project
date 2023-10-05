@@ -7,7 +7,7 @@
 • Shows the user a catalog of various products available for purchase in the store.<br />
 • Tech Stack: SQL<br />
 
-### https://rb.gy/q30hz
+## https://rb.gy/q30hz
 
 
 
