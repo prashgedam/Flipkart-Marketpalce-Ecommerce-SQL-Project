@@ -1,5 +1,5 @@
 
-# EZCommerce: Simplifying Online Shopping :: SQL
+# EZCommerce: Simplifying Online Shopping : SQL
 
 ## Objective:
 Design and implement a relational database system to model an e-commerce marketplace similar to Flipkart. Develop SQL queries to handle various aspects of the marketplace, including product management, order processing, user interactions, & analytics.
